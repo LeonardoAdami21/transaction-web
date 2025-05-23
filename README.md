@@ -1,54 +1,56 @@
 # React + TypeScript + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+🎨 Interface Moderna e Responsiva
 
-Currently, two official plugins are available:
+Design clean com gradientes e cards modernos
+Responsivo para desktop, tablet e mobile
+Ícones do Lucide React para melhor UX
+Animações suaves e loading states
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+🔧 Funcionalidades Implementadas
 
-## Expanding the ESLint configuration
+Criação de Transações: Formulário com validação de valor e timestamp
+Visualização de Estatísticas: Cards com métricas dos últimos 60 segundos
+Exclusão de Transações: Botão para limpar todas as transações
+Auto-refresh: Atualização automática das estatísticas a cada 5 segundos
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+📊 Estatísticas Exibidas
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+Total de transações
+Soma total (formatada em BRL)
+Média dos valores
+Menor valor
+Maior valor
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+🛠 Estrutura Técnica
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+Fetch API nativa (não precisa do axios para esta implementação)
+TypeScript com tipagem completa
+Estado gerenciado com hooks (useState, useEffect)
+Tratamento de erros robusto
+Validações client-side
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+# Estrutura do Projeto
+src/
+├── components/
+│   ├── UI/
+│   │   ├── StatCard.tsx
+│   │   └── Alert.tsx
+│   ├── Forms/
+│   │   └── TransactionForm.tsx
+│   ├── Statistics/
+│   │   └── StatisticsGrid.tsx
+│   ├── Actions/
+│   │   └── ActionsPanel.tsx
+│   └── Layout/
+│       ├── Header.tsx
+│       └── Footer.tsx
+├── hooks/
+│   └── useTransactions.ts
+├── pages/
+│   └── TransactionsPage.tsx
+├── services/
+│   └── api.ts
+├── types/
+│   └── index.ts
+└── App.tsx
