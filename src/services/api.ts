@@ -2,6 +2,12 @@ import type { Statistics, Transaction } from "../types";
 
 export const transactionService = {
   async createTransaction(transaction: Transaction): Promise<void> {
+    if (!transaction.timestamp) {
+      transaction.timestamp = new Date().toISOString();
+    }
+    if (transaction.amount < 0) {
+      throw new Error("O valor da transação deve ser maior que zero");
+    }
     const response = await fetch(
       `${import.meta.env.VITE_BACKEND_URL}/transactions`,
       {

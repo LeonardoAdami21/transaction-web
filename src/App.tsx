@@ -1,9 +1,8 @@
-import React from 'react'
+import React from "react";
+import TransactionsPages from "./pages/TransactionsPages";
 
 const App: React.FC = () => {
-  return (
-    <div>App</div>
-  )
-}
+  return <TransactionsPages />;
+};
 
-export default App
+export default App;
