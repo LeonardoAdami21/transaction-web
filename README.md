@@ -54,3 +54,8 @@ src/
 ├── types/
 │   └── index.ts
 └── App.tsx
+
+# Para utilizar :
+- Utilize a versão LTS ou a versão 22.14.0.
+- Instale o yarn
+- Para roda é so utilizar o comando yarn dev
